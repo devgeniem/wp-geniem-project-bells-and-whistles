@@ -1,0 +1,25 @@
+{
+    "name": "devgeniem/wp-geniem-wp-project-bells-and-whistles",
+    "type": "wordpress-muplugin",
+    "license": "GPL3",
+    "description": "Geniem WP Project Bells & Whistles",
+    "homepage": "http://geniem.com",
+    "authors": [
+        {
+            "name": "Ville Siltala",
+            "email": "ville.siltala@geniem.com",
+            "homepage": "https://github.com/villesiltala"
+        }
+    ],
+    "minimum-stability": "dev",
+    "keywords": [
+        "wordpress", "wp", "plugin"
+    ],
+    "require": {
+        "php": ">=7.1",
+        "composer/installers": ">=v1.0.12"
+    },
+    "autoload": {
+        "psr-4": {"Geniem\\Project\\": "src/"}
+    }
+}
