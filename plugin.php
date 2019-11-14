@@ -3,13 +3,13 @@
  * Plugin Name: Geniem WP Project Bells & Whistles
  * Plugin URI: https://github.com/devgeniem/wp-plugin-boilerplate
  * Description: A collection of various configurations and fixes for Geniem WordPress projects.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Geniem Oy
  * Author URI: https://geniem.com
  * License: GPL3
  */
 
-use Geniem\Project\Example;
+use Geniem\Project;
 
 // Check if Composer has been initialized in this directory.
 // Otherwise we just use global composer autoloading.
@@ -32,7 +32,7 @@ function is_disabled_class( $class_name ) {
 
 // Add your feature classes here.
 $classes = [
-    Example::class,
+    Project\DisableAdminEmailVerification::class,
 ];
 
 // Run constructors for all defined feature classes.
