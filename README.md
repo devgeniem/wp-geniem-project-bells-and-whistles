@@ -23,11 +23,11 @@ Disables the periodical admin email verification that was introduced in WordPres
 
 ### Disabling a feature class
 
-To disable a feature defined in a specific class, add its class name into the following constant in your WordPress configuration file (e.g. wp-config.php):
+To disable a feature defined in a specific class, add its class name without the namespace into the following constant in your WordPress configuration file (e.g. wp-config.php):
 
 ```
 define( 'GENIEM_DISABLE_BELLS_AND_WHISTLES', [
-    'Geniem\\Project\\Example',
+    'Example',
 ] );
 ```
 
