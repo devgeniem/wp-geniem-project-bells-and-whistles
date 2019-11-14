@@ -15,6 +15,12 @@ $ composer require devgeniem/devgeniem/wp-geniem-wp-project-bells-and-whistles
 - Composer setup for WordPress plugins
 - PSR-4 autoloading for namespace ***\Geniem\Project*** in the ***src/*** directory.
 
+### Feature classes
+
+#### DisableAdminEmailVerification
+
+Disables the periodical admin email verification that was introduced in WordPress version 5.3.
+
 ### Disabling a feature class
 
 To disable a feature defined in a specific class, add its class name into the following constant in your WordPress configuration file (e.g. wp-config.php):
