@@ -22,6 +22,7 @@ if ( file_exists(__DIR__ . '/vendor/autoload.php' ) ) {
 // Add your production feature classes here.
 $classes = [
     Project\DisableAdminEmailVerification::class,
+    Project\Add404Headers::class,
 ];
 
 // Add your development feature classes here.
