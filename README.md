@@ -28,7 +28,7 @@ To disable a feature defined in a specific class, add its class name without the
 ```
 define( 'GENIEM_DISABLE_BELLS_AND_WHISTLES', [
     'Example',
-] );
+]);
 ```
 
 ## Contributions
