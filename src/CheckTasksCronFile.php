@@ -14,7 +14,7 @@ class CheckTasksCronFile {
      * The constructor.
      */
     public function __construct() {
-        add_action('init', [$this, 'run_on_init']);
+        add_action( 'init', [ $this, 'run_on_init' ] );
     }
 
     /**
@@ -23,13 +23,13 @@ class CheckTasksCronFile {
      * @return void
      */
     public function run_on_init() {
-        if ( file_exists( WP_CONTENT_DIR . "/../../tasks.cron" ) ) {
-            $file = fopen( WP_CONTENT_DIR . "/../../tasks.cron", 'r' );
+        if ( file_exists( WP_CONTENT_DIR . '/../../tasks.cron' ) ) {
+            $file = fopen( WP_CONTENT_DIR . '/../../tasks.cron', 'r' );
             fseek( $file, -1, SEEK_END );
             $char = fgetc( $file );
 
             if ( $char !== "\n" ) {
-                admin_notice( 'error', 'Projektin juuressa olevan tasks.cron tiedoston lopussa ei ole rivinvaihtoa. Käy lisäämässä se sinne.' );
+                \Geniem\admin_notice( 'error', 'Projektin juuressa olevan tasks.cron tiedoston lopussa ei ole rivinvaihtoa. Käy lisäämässä se sinne.' );
             }
         }
     }

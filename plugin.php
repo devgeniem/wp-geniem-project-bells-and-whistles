@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Plugin Name: Geniem WP Project Bells & Whistles
  * Plugin URI: https://github.com/devgeniem/wp-plugin-boilerplate
@@ -9,6 +8,8 @@
  * Author URI: https://geniem.com
  * License: GPL3
  */
+
+namespace Geniem;
 
 use Geniem\Project;
 
@@ -24,7 +25,7 @@ $classes = [
 ];
 
 // Add your development feature classes here.
-if ( WP_ENV === "development" ) {
+if ( WP_ENV === 'development' ) {
     $development_classes = [
         Project\CheckTasksCronFile::class,
     ];
@@ -55,9 +56,10 @@ function is_disabled_class( $class_name ) {
     // Get the class short name.
     try {
         $short_name = ( new \ReflectionClass( $class_name ) )->getShortName();
-    } catch  (\ReflectionException $e ) {
+    }
+    catch( \ReflectionException $e ) {
         // No class found.
-        error_log ($e->getMessage() ); // phpcs:ignore
+        error_log( $e->getMessage() ); // phpcs:ignore
         return true;
     }
 
@@ -75,7 +77,7 @@ function is_disabled_class( $class_name ) {
  * @return void
  */
 function admin_notice( $type, $message ) {
-    add_action('admin_notices', function () use ( $type, $message ) {
+    add_action( 'admin_notices', function () use ( $type, $message ) {
         echo "<div class='notice notice-$type'><p>$message</p></div>";
     });
 }
