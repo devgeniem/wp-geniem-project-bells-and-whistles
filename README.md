@@ -7,7 +7,7 @@ This WordPress mu-plugin is a collection of fixes and configurations for Geniem 
 The boilerplate plugin works as a WordPress mu-plugin but requires the [Bedrocks' mu-plugin autoloader](https://roots.io/bedrock/docs/mu-plugins-autoloader/). Install the plugin with Composer:
 
 ```
-$ composer require devgeniem/devgeniem/wp-geniem-wp-project-bells-and-whistles
+$ composer require devgeniem/wp-geniem-wp-project-bells-and-whistles
 ```
 
 ## Features
