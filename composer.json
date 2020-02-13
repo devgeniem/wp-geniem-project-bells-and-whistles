@@ -1,7 +1,7 @@
 {
     "name": "devgeniem/wp-geniem-project-bells-and-whistles",
     "type": "wordpress-muplugin",
-    "license": "GPL3",
+    "license": "GPL-3.0-or-later",
     "description": "Geniem WP Project Bells & Whistles",
     "homepage": "http://geniem.com",
     "authors": [
