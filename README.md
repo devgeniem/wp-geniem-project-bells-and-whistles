@@ -21,6 +21,10 @@ $ composer require devgeniem/wp-geniem-project-bells-and-whistles
 
 Disables the periodical admin email verification that was introduced in WordPress version 5.3.
 
+#### FixStreamDateFormat
+
+Fixes the date format in the WP Stream plugin database queries to make it work with Geniem's databases.
+
 ### Disabling a feature class
 
 To disable a feature defined in a specific class, add its class name without the namespace into the following constant in your WordPress configuration file (e.g. wp-config.php):

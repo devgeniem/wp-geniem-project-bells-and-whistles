@@ -23,6 +23,7 @@ if ( file_exists(__DIR__ . '/vendor/autoload.php' ) ) {
 $classes = [
     Project\DisableAdminEmailVerification::class,
     Project\Add404Headers::class,
+    Project\FixStreamDateFormat::class,
 ];
 
 // Add your development feature classes here.
