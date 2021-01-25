@@ -3,7 +3,7 @@
  * Plugin Name: Geniem WP Project Bells & Whistles
  * Plugin URI: https://github.com/devgeniem/wp-plugin-boilerplate
  * Description: A collection of various configurations and fixes for Geniem WordPress projects.
- * Version: 1.2.0
+ * Version: 1.5.0
  * Author: Geniem Oy
  * Author URI: https://geniem.com
  * License: GPL3
@@ -24,6 +24,7 @@ $classes = [
     Project\DisableAdminEmailVerification::class,
     Project\Add404Headers::class,
     Project\FixStreamDateFormat::class,
+    Project\PolylangS3Offload::class,
 ];
 
 // Add your development feature classes here.
