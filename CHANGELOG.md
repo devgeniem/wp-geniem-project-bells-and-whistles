@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.5.0] - 2021-01-29
+
+### Added
+- Disable Gutenberg default fullscreen mode.
+- Disable Gutenberg core block patterns.
+- Hide Gutenberg device preview options with CSS.
+
 ## [1.4.0] - 2020-02-13
 
 ### Added
