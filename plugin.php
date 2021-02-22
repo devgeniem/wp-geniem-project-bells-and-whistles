@@ -24,6 +24,9 @@ $classes = [
     Project\DisableAdminEmailVerification::class,
     Project\Add404Headers::class,
     Project\FixStreamDateFormat::class,
+    Project\DisableGutenbergAutoFullscreen::class,
+    Project\DisableGutenbergBlockPatterns::class,
+    Project\DisableGutenbergDevicePreviewOptions::class,
 ];
 
 // Add your development feature classes here.
