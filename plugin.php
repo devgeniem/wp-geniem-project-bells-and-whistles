@@ -3,7 +3,7 @@
  * Plugin Name: Geniem WP Project Bells & Whistles
  * Plugin URI: https://github.com/devgeniem/wp-plugin-boilerplate
  * Description: A collection of various configurations and fixes for Geniem WordPress projects.
- * Version: 1.2.0
+ * Version: 1.6.0
  * Author: Geniem Oy
  * Author URI: https://geniem.com
  * License: GPL3
@@ -27,6 +27,7 @@ $classes = [
     Project\DisableGutenbergAutoFullscreen::class,
     Project\DisableGutenbergBlockPatterns::class,
     Project\DisableGutenbergDevicePreviewOptions::class,
+    Project\RemoveSiteHealthWidget::class,
 ];
 
 // Add your development feature classes here.
