@@ -14,7 +14,7 @@ class Example {
      * The constructor.
      */
     public function __construct() {
-        add_action( 'init', [ $this, 'run_on_init' ] );
+        \add_action( 'init', [ $this, 'run_on_init' ] );
     }
 
     /**
