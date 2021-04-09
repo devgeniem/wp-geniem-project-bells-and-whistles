@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [big-image-size-treshold] - 2021-03-25
+## [1.6.0] - 2021-04-09
 - Disable big image size treshold with the class `DisableBigImageSizeTreshold`.
 
 ## [1.5.0] - 2021-01-29
