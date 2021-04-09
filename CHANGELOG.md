@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ## [big-image-size-treshold] - 2021-03-25
-- Added filter `big_image_size_threshold` to disable image treshold. This helps to prevent problems with big images.
+- Disable big image size treshold with the class `DisableBigImageSizeTreshold`.
 
 ## [1.5.0] - 2021-01-29
 
