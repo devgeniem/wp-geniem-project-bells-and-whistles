@@ -24,6 +24,7 @@ $classes = [
     Project\DisableAdminEmailVerification::class,
     Project\Add404Headers::class,
     Project\FixStreamDateFormat::class,
+    Project\DisableBigImageSizeTreshold::class,
     Project\DisableGutenbergAutoFullscreen::class,
     Project\DisableGutenbergBlockPatterns::class,
     Project\DisableGutenbergDevicePreviewOptions::class,
@@ -86,6 +87,3 @@ function admin_notice( $type, $message ) {
         echo "<div class='notice notice-$type'><p>$message</p></div>";
     });
 }
-
-// To prevent problems with scaled images.
-\add_filter( 'big_image_size_threshold', '__return_false' );
