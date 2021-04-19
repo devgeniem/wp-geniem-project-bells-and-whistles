@@ -25,6 +25,7 @@ $classes = [
     Project\Add404Headers::class,
     Project\FixStreamDateFormat::class,
     Project\DisableBigImageSizeTreshold::class,
+    Project\DisableFloc::class,
     Project\DisableGutenbergAutoFullscreen::class,
     Project\DisableGutenbergBlockPatterns::class,
     Project\DisableGutenbergDevicePreviewOptions::class,
