@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- Disable Google's FloC Tracking with the class `DisableFloc`.
+
 ## [1.6.0] - 2021-04-09
 - Disable big image size treshold with the class `DisableBigImageSizeTreshold`.
 
