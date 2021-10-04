@@ -24,10 +24,13 @@ $classes = [
     Project\DisableAdminEmailVerification::class,
     Project\Add404Headers::class,
     Project\FixStreamDateFormat::class,
+    Project\DisableBigImageSizeTreshold::class,
+    Project\DisableFloc::class,
     Project\DisableGutenbergAutoFullscreen::class,
     Project\DisableGutenbergBlockPatterns::class,
     Project\DisableGutenbergDevicePreviewOptions::class,
     Project\RemoveSiteHealthWidget::class,
+    Project\DisableSiteHealthChecks::class,
 ];
 
 // Add your development feature classes here.

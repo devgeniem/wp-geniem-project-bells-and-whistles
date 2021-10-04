@@ -6,10 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.6.0] - 2021-03-02
-
 ### Added
+
+- Added ability to disable `WP_Site_Health::get_tests()` tests.
+- Disable Google's FloC Tracking with the class `DisableFloc`.
 - Remove the Site Health widget from the admin dashboard.
+
+## [1.6.0] - 2021-04-09
+
+- Disable big image size treshold with the class `DisableBigImageSizeTreshold`.
 
 ## [1.5.0] - 2021-01-29
 
