@@ -3,3 +3,4 @@
 
 # Libraries installed by Composer, Bower etc
 vendor/*
+composer.lock

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
+
+- Added ability to disable `WP_Site_Health::get_tests()` tests.
 - Disable Google's FloC Tracking with the class `DisableFloc`.
 
 ## [1.6.0] - 2021-04-09
