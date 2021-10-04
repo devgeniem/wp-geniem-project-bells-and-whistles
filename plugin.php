@@ -29,6 +29,7 @@ $classes = [
     Project\DisableGutenbergAutoFullscreen::class,
     Project\DisableGutenbergBlockPatterns::class,
     Project\DisableGutenbergDevicePreviewOptions::class,
+    Project\DisableSiteHealthChecks::class,
 ];
 
 // Add your development feature classes here.
