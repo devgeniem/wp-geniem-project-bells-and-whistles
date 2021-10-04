@@ -15,7 +15,7 @@ use Geniem\Project;
 
 // Check if Composer has been initialized in this directory.
 // Otherwise we just use global composer autoloading.
-if ( file_exists(__DIR__ . '/vendor/autoload.php' ) ) {
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
     require_once __DIR__ . '/vendor/autoload.php';
 }
 
@@ -35,19 +35,20 @@ $classes = [
 if ( WP_ENV === 'development' ) {
     $development_classes = [
         Project\CheckTasksCronFile::class,
+        Project\CheckNginxHelperOrigin::class,
     ];
 }
 
 // Run constructors for all defined feature classes.
-array_walk( $classes, function ( $class_name ) {
-    if ( class_exists( $class_name ) && !is_disabled_class( $class_name ) ) {
+\array_walk( $classes, function ( $class_name ) {
+    if ( \class_exists( $class_name ) && ! \Geniem\is_disabled_class( $class_name ) ) {
         new $class_name();
     }
 });
 
 if ( WP_ENV === 'development' ) {
-    array_walk( $development_classes, function ( $class_name ) {
-        if (class_exists( $class_name ) && !is_disabled_class( $class_name ) ) {
+    \array_walk( $development_classes, function ( $class_name ) {
+        if ( \class_exists( $class_name ) && ! \Geniem\is_disabled_class( $class_name ) ) {
             new $class_name();
         }
     });
@@ -64,14 +65,14 @@ function is_disabled_class( $class_name ) {
     try {
         $short_name = ( new \ReflectionClass( $class_name ) )->getShortName();
     }
-    catch( \ReflectionException $e ) {
+    catch ( \ReflectionException $e ) {
         // No class found.
-        error_log( $e->getMessage() ); // phpcs:ignore
+        \error_log( $e->getMessage() ); // phpcs:ignore
         return true;
     }
 
-    $disable  = defined( 'GENIEM_DISABLE_BELLS_AND_WHISTLES' ) ? GENIEM_DISABLE_BELLS_AND_WHISTLES : [];
-    $disabled = in_array( $short_name, $disable, true );
+    $disable  = \defined( 'GENIEM_DISABLE_BELLS_AND_WHISTLES' ) ? GENIEM_DISABLE_BELLS_AND_WHISTLES : [];
+    $disabled = \in_array( $short_name, $disable, true );
 
     return $disabled;
 }
@@ -84,7 +85,7 @@ function is_disabled_class( $class_name ) {
  * @return void
  */
 function admin_notice( $type, $message ) {
-    add_action( 'admin_notices', function () use ( $type, $message ) {
-        echo "<div class='notice notice-$type'><p>$message</p></div>";
+    \add_action( 'admin_notices', function () use ( $type, $message ) {
+        echo '<div class="notice notice-' . $type . '"><p>' . $message . '</p></div>'; // phpcs:ignore
     });
 }
