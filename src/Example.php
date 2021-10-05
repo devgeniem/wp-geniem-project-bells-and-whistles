@@ -23,7 +23,6 @@ class Example {
      * @return void
      */
     public function run_on_init() {
-        // I could do something, but not gonna for now..
+        // I could do something, but not gonna for now...
     }
-
 }
