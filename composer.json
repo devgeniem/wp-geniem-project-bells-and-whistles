@@ -3,7 +3,7 @@
     "type": "wordpress-muplugin",
     "license": "GPL-3.0-or-later",
     "description": "Geniem WP Project Bells & Whistles",
-    "homepage": "http://geniem.com",
+    "homepage": "https://github.com/devgeniem/wp-geniem-project-bells-and-whistles",
     "authors": [
         {
             "name": "Ville Siltala",
@@ -11,15 +11,23 @@
             "homepage": "https://github.com/villesiltala"
         }
     ],
-    "minimum-stability": "dev",
     "keywords": [
         "wordpress", "wp", "plugin"
     ],
-    "require": {
-        "php": ">=7.1",
-        "composer/installers": ">=v1.0.12"
+    "scripts": {
+        "lint": "vendor/bin/phpcs --standard=phpcs.xml src/ plugin.php -s --warning-severity=0",
+        "lint-all": "vendor/bin/phpcs --standard=phpcs.xml src/ plugin.php",
+        "lint-fix": "vendor/bin/phpcbf --standard=phpcs.xml --basepath=. src/ plugin.php"
     },
     "autoload": {
         "psr-4": {"Geniem\\Project\\": "src/"}
+    },
+    "require": {
+        "php": ">=7.3",
+        "composer/installers": "^v1.12.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "devgeniem/geniem-rules-codesniffer": ">=1.1.0"
     }
 }

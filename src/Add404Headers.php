@@ -14,7 +14,7 @@ class Add404Headers {
      * The constructor.
      */
     public function __construct() {
-        add_filter( 'nocache_headers', function( $headers ) {
+        add_filter( 'nocache_headers', function ( $headers ) {
             if ( ! is_admin() ) {
                 $headers = [];
             }

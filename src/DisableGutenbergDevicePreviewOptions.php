@@ -23,14 +23,14 @@ class DisableGutenbergDevicePreviewOptions {
      * @return void
      */
     public function disable_gutenberg_device_preview_options() {
-        $style = "
+        $style = '
 .edit-post-post-preview-dropdown .components-dropdown-menu__menu .components-menu-group + .components-menu-group {
     border-top: none;
 }
 
 .block-editor-post-preview__button-resize {
     display: none;
-}";
+}';
 
         wp_add_inline_style( 'wp-block-library', $style );
     }

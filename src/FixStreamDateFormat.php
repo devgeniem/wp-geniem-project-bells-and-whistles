@@ -22,10 +22,12 @@ class FixStreamDateFormat {
      * Convert date field value for Stream plugin.
      *
      * @param array $data Data that Stream saves.
+     *
      * @return array
      */
     public function fix_stream_date_format( $data ) {
         $data['created'] = date( 'Y-m-d H:i:s', strtotime( $data['created'] ) );
+
         return $data;
     }
 }

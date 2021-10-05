@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Verify there's a newline at the end of tasks.cron file.
  */
@@ -25,11 +24,14 @@ class CheckTasksCronFile {
     public function run_on_init() {
         if ( file_exists( WP_CONTENT_DIR . '/../../tasks.cron' ) ) {
             $file = fopen( WP_CONTENT_DIR . '/../../tasks.cron', 'r' );
-            fseek( $file, -1, SEEK_END );
+            fseek( $file, - 1, SEEK_END );
             $char = fgetc( $file );
 
             if ( $char !== "\n" ) {
-                \Geniem\admin_notice( 'error', 'Projektin juuressa olevan tasks.cron tiedoston lopussa ei ole rivinvaihtoa. Käy lisäämässä se sinne.' );
+                \Geniem\admin_notice(
+                    'error',
+                    'Projektin juuressa olevan tasks.cron tiedoston lopussa ei ole vaadittua rivinvaihtoa.'
+                );
             }
         }
     }
