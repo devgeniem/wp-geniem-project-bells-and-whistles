@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.7.0] - 2021-10-05
+
 ### Added
 
 - Added ability to disable `WP_Site_Health::get_tests()` tests.
