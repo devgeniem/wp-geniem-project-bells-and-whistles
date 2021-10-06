@@ -33,7 +33,7 @@ $classes = [
 
 // If GENIEM_BELLS_AND_WHISTLES_FLOC_OPTIN constant has been set true,
 // send HTTP Header: Permissions-Policy: interest-cohort=()
-if ( defined( 'GENIEM_BELLS_AND_WHISTLES_FLOC_OPTIN' ) && GENIEM_BELLS_AND_WHISTLES_FLOC_OPTIN ) {
+if ( defined( 'GENIEM_BELLS_AND_WHISTLES_FLOC_OPTIN' ) && GENIEM_BELLS_AND_WHISTLES_FLOC_OPTIN === true ) {
     $classes[] = Project\DisableFloc::class;
 }
 
