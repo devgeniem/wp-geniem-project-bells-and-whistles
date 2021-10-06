@@ -23,7 +23,6 @@ $classes = [
     Project\Add404Headers::class,
     Project\DisableAdminEmailVerification::class,
     Project\DisableBigImageSizeTreshold::class,
-    Project\DisableFloc::class,
     Project\DisableGutenbergAutoFullscreen::class,
     Project\DisableGutenbergBlockPatterns::class,
     Project\DisableGutenbergDevicePreviewOptions::class,
@@ -31,6 +30,12 @@ $classes = [
     Project\FixStreamDateFormat::class,
     Project\RemoveSiteHealthWidget::class,
 ];
+
+// If GENIEM_BELLS_AND_WHISTLES_FLOC_OPTIN constant has been set true,
+// send HTTP Header: Permissions-Policy: interest-cohort=()
+if ( defined( 'GENIEM_BELLS_AND_WHISTLES_FLOC_OPTIN' ) && GENIEM_BELLS_AND_WHISTLES_FLOC_OPTIN ) {
+    $classes[] = Project\DisableFloc::class;
+}
 
 // Add your development feature classes here.
 if ( defined( 'WP_ENV' ) && WP_ENV === 'development' ) {
