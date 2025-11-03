@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.7.1] - 2025-11-03
+
+### Added
+
+- Added Composer installer v2 dependency
+
 ## [1.7.0] - 2021-10-05
 
 ### Added
